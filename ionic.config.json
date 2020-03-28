@@ -1,0 +1,7 @@
+{
+  "name": "Proyek_Akhir",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
