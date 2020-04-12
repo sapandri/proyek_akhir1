@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="/tabs/tab3"> </ion-back-button>
+ </ion-buttons>
+    <ion-title>User Description</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goEdit()">
+        <ion-icon name="create"> </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+ <ion-card>
+ <ion-card-header>
+ <ion-card-title> {{user.username | uppercase}}</ion-card-title>
+ </ion-card-header>
+ <ion-card-content>
+  <p>Name: {{user.name}}</p>
+  <p>{{user.created_at | date}}</p>
+ </ion-card-content>
+ </ion-card>
+</ion-content>
+ 

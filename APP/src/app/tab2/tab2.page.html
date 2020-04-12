@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Data Buku Polibatam
+    </ion-title> 
+    <ion-buttons slot="primary">
+      <ion-button (click)="goAdd()">
+        <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="ion-padding">
+
+   <ion-button color="medium" expand="block" (click)="goAdd()">Tambah Buku</ion-button>
+   <ion-grid >
+     <ion-row>
+       <ion-col col-12>
+           
+        <table >
+             <thead >
+             <tr >
+               <th>No</th>
+               <th>Nama Buku</th>
+               <th>Stok</th>
+               <th>Posisi</th>
+               <th>Status</th>
+               <th>Aksi</th>
+             </tr>
+             </thead>
+             <tbody *ngIf="books">
+               <tr *ngFor="let book of books" >
+                 <td valign="top"  (click)="goDetail(book)"  >{{book.id}}</td>
+                 <td valign="top"  (click)="goDetail(book)" >{{book.title}}</td>   
+                 <td valign="top"  (click)="goDetail(book)"  ></td>
+                 <td valign="top"></td>
+                 <td valign="top"></td>
+
+                 <td valign="top">
+                  <ion-button color="danger" size="small" (click)="delete(book)"><ion-icon name="trash"></ion-icon></ion-button>
+                  <ion-button color="secondary" size="small"(click)="goEdit(book)"><ion-icon name="create"></ion-icon></ion-button>
+                 </td>       
+               </tr>
+             </tbody>
+           </table>         
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+ </div>
+</ion-content>

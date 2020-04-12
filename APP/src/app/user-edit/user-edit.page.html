@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Pengguna</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+ <ion-item>
+ <ion-label position="stacked">Email</ion-label>
+ <ion-input [(ngModel)]="user.username" value="" placeholder="Masukkan Email"></ion-input>
+ </ion-item>
+ <ion-item>
+ <ion-label position="stacked">Password Baru</ion-label>
+ <ion-input type="password" [(ngModel)]="user.password" placeholder="Masukkan Password Baru"></ion-input>
+ </ion-item>
+ <ion-item>
+ <ion-label position="stacked">Nama Pengguna</ion-label>
+ <ion-input [(ngModel)]="user.name" placeholder="Masukkan Nama Pengguna"></ion-input>
+ </ion-item>
+ <ion-button expand="block" (click)="update()">SUBMIT</ion-button>
+</ion-content>
+ 

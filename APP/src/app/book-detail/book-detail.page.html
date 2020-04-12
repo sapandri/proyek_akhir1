@@ -1,0 +1,26 @@
+<!-- //src/app/book-detail/book-detail.page.html -->
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button defaultHref="/tabs/tab2"> </ion-back-button>
+  </ion-buttons>
+  <ion-title>Book Description</ion-title>
+  <ion-buttons slot="end">
+  <ion-button (click)="goEdit()">
+  <ion-icon name="create"> </ion-icon>
+  </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+ <ion-card>
+ <ion-card-header>
+ <ion-card-title> {{book.title | uppercase}}</ion-card-title>
+ </ion-card-header>
+ <ion-card-content>
+ <img src="{{book.images}}" onError="this.src='/assets/placeholder.jpg'">
+ <p>Description: {{book.description}}</p>
+ <p>{{book.created_at | date}}</p>
+ </ion-card-content>
+ </ion-card>
+</ion-content>

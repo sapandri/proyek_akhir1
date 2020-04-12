@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Tambah Pengguna Baru</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input [(ngModel)]="user.username" placeholder="Masukkan Email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Password / Sandi</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" placeholder="Masukkan password / Kata sandi"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Nama Pengguna Baru</ion-label>
+    <ion-input [(ngModel)]="user.name" placeholder="Masukkan nama pengguna baru"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="submit()">SUBMIT</ion-button>
+</ion-content>

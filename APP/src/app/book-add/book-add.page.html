@@ -1,0 +1,25 @@
+<!-- //src/app/book-add/book-add.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add New Book</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Title</ion-label>
+    <ion-input [(ngModel)]="book.title" placeholder="Enter title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-textarea type="text" [(ngModel)]="book.description" placeholder="Enter description"></ion-textarea>
+  </ion-item>
+    
+    <ion-button color="medium" expand="block">Masukkan Gambar</ion-button>
+  <ion-button expand="block" (click)="submit()">SUBMIT</ion-button>
+</ion-content>
