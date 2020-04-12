@@ -1,0 +1,2 @@
+Masuk ke folder API
+Lalu ketikan node server.js di visualcode atau cmd (bebas)
